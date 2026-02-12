@@ -5,20 +5,25 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body{
   position: relative;
   height: fit-content;
   width:100%;
   height: 100vh;
-  overflow: hidden;
+  overflow: auto;
   display: flex;
+  flex-direction: column;
   padding: 30px 0;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
 }
 
 .back-vid{
-  position: absolute;
+  position: fixed;
   left: 0;
   top: 0;
   z-index: -1;
@@ -232,13 +237,206 @@ nav a:hover ,
   font-size: 20px;
 }
 
-@media (min-width: 1220px) {
-  body{
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
-  }
+/* About Section */
+.about-section {
+  width: 90%;
+  padding: 80px 40px;
+  background-color: #4ad0ee1b;
+  backdrop-filter: blur(10px);
+  border-radius: 50px;
+  box-shadow: 5px 5px 20px 1px #4acfee;
+  margin: 40px 0;
+}
 
+.about-section h2 {
+  text-align: center;
+  color: #4acfee;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+
+.about-content {
+  max-width: 800px;
+  margin: 0 auto;
+  color: white;
+  line-height: 1.8;
+  font-size: 1.1rem;
+}
+
+.about-content p {
+  margin-bottom: 20px;
+}
+
+/* Skills Section */
+.skills-section {
+  width: 90%;
+  padding: 80px 40px;
+  background-color: #4ad0ee1b;
+  backdrop-filter: blur(10px);
+  border-radius: 50px;
+  box-shadow: 5px 5px 20px 1px #4acfee;
+  margin: 40px 0;
+}
+
+.skills-section h2 {
+  text-align: center;
+  color: #4acfee;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 30px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.skill-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(74, 207, 238, 0.3);
+  border-radius: 15px;
+  padding: 40px 20px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(74, 207, 238, 0.3);
+}
+
+.skill-card i {
+  font-size: 4rem;
+  color: #4acfee;
+  margin-bottom: 15px;
+}
+
+.skill-card h3 {
+  color: white;
+  font-size: 1.2rem;
+}
+
+/* Portfolio Section Styles */
+.portfolio-section {
+  width: 90%;
+  padding: 80px 40px;
+  background-color: #4ad0ee1b;
+  backdrop-filter: blur(10px);
+  border-radius: 50px;
+  box-shadow: 5px 5px 20px 1px #4acfee;
+  margin: 40px 0;
+}
+
+.portfolio-section h2 {
+  text-align: center;
+  color: #4acfee;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+
+#portfolio-items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.portfolio-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(74, 207, 238, 0.3);
+  border-radius: 15px;
+  padding: 30px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portfolio-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(74, 207, 238, 0.3);
+}
+
+.portfolio-card h3 {
+  color: #4acfee;
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.portfolio-card p {
+  color: #fff;
+  line-height: 1.6;
+}
+
+/* Add Portfolio Form Styles */
+.add-portfolio {
+  width: 90%;
+  padding: 80px 40px;
+  background-color: #4ad0ee1b;
+  backdrop-filter: blur(10px);
+  border-radius: 50px;
+  box-shadow: 5px 5px 20px 1px #4acfee;
+  margin-bottom: 40px;
+}
+
+.add-portfolio h2 {
+  text-align: center;
+  color: #4acfee;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+
+#portfolio-form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+#portfolio-form input,
+#portfolio-form textarea {
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(74, 207, 238, 0.3);
+  border-radius: 10px;
+  color: #fff;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+#portfolio-form input::placeholder,
+#portfolio-form textarea::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+#portfolio-form textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+#portfolio-form button {
+  padding: 15px 30px;
+  background: #4acfee;
+  color: #000;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#portfolio-form button:hover {
+  background: #3ab8d6;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 20px rgba(74, 207, 238, 0.4);
+}
+
+@media (min-width: 1220px) {
   .info-sec{
     margin-top: 30px;
   }
@@ -282,5 +480,17 @@ nav a:hover ,
 
   .hero h1{
     font-size: 40px;
+  }
+  
+  .portfolio-section,
+  .add-portfolio,
+  .about-section,
+  .skills-section {
+    padding: 40px 20px;
+  }
+  
+  #portfolio-items,
+  .skills-grid {
+    grid-template-columns: 1fr;
   }
 }

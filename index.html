@@ -12,15 +12,15 @@
   <video autoplay loop muted plays-inline class="back-vid">
     <source src="images/galaxy.mp4" type="video/mp4">
   </video>
-  <section class="main-section">
+  <section class="main-section" id="home">
     <nav>
       <h1 data-aos="zoom-in" data-aos-duration="1000"><span style="color: #4acfee;">Pro</span>Coder09</h1>
       <ul>
-        <li data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100"><a class="active" href="#">Home </a></li>
-        <li data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200"><a href="#">About</a></li>
-        <li data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300"><a href="#">Projects</a></li>
-        <li data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400"><a href="#">skils</a></li>
-        <li data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500"><a href="#">Content</a></li>
+        <li data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100"><a class="active" href="#home">Home </a></li>
+        <li data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200"><a href="#about">About</a></li>
+        <li data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300"><a href="#projects">Projects</a></li>
+        <li data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400"><a href="#skills">Skills</a></li>
+        <li data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500"><a href="#content">Content</a></li>
       </ul>
     </nav>
 
@@ -64,6 +64,66 @@
       </div>
     </div>
   </section>
+
+  <!-- About Section -->
+  <section class="about-section" id="about">
+    <h2 data-aos="fade-up">About Me</h2>
+    <div class="about-content" data-aos="fade-up" data-aos-delay="200">
+      <p>I'm a passionate developer with expertise in web technologies. I love creating beautiful and functional websites that solve real-world problems.</p>
+      <p>With years of experience in the field, I specialize in front-end and back-end development, bringing ideas to life through clean code and innovative solutions.</p>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section class="skills-section" id="skills">
+    <h2 data-aos="fade-up">My Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-card" data-aos="flip-left" data-aos-delay="100">
+        <i class='bx bxl-html5'></i>
+        <h3>HTML5</h3>
+      </div>
+      <div class="skill-card" data-aos="flip-left" data-aos-delay="200">
+        <i class='bx bxl-css3'></i>
+        <h3>CSS3</h3>
+      </div>
+      <div class="skill-card" data-aos="flip-left" data-aos-delay="300">
+        <i class='bx bxl-javascript'></i>
+        <h3>JavaScript</h3>
+      </div>
+      <div class="skill-card" data-aos="flip-left" data-aos-delay="400">
+        <i class='bx bxl-react'></i>
+        <h3>React</h3>
+      </div>
+      <div class="skill-card" data-aos="flip-left" data-aos-delay="500">
+        <i class='bx bxl-nodejs'></i>
+        <h3>Node.js</h3>
+      </div>
+      <div class="skill-card" data-aos="flip-left" data-aos-delay="600">
+        <i class='bx bxl-mongodb'></i>
+        <h3>MongoDB</h3>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio Items Display -->
+  <section class="portfolio-section" id="projects">
+    <h2>My Portfolio</h2>
+    <div id="portfolio-items"></div>
+  </section>
+
+  <!-- Add Portfolio Form -->
+  <section class="add-portfolio" id="content">
+    <h2>Add New Project</h2>
+    <form id="portfolio-form">
+      <input type="text" id="portfolio-title" placeholder="Project Title" required>
+      <textarea id="portfolio-desc" placeholder="Project Description" required></textarea>
+      <button type="submit">Add Project</button>
+    </form>
+  </section>
+
+  <!-- Link JavaScript -->
+  <script src="script.js"></script>
+  
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
     AOS.init();
