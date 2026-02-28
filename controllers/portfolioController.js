@@ -1,20 +1,20 @@
 let portfolio = [];
 
 exports.getPortfolio = (req, res) => {
-    res.json(portfolio);
+  res.json(portfolio);
 };
 
 exports.createPortfolio = (req, res) => {
-    const newItem = req.body;
+  const newItem = req.body || {};
 
-    if (!newItem.title) {
-        return res.status(400).json({ message: "Title is required" });
-    }
+  if (!newItem.title) {
+    return res.status(400).json({ message: "Title is required" });
+  }
 
-    portfolio.push(newItem);
+  portfolio.push(newItem);
 
-    res.json({
-        message: "Portfolio added",
-        data: newItem
-    });
+  res.json({
+    message: "Portfolio added",
+    data: newItem
+  });
 };
